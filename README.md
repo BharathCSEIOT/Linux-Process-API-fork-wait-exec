@@ -67,13 +67,11 @@ int main() {
     if (pid == -1) {
         perror("fork");
         exit(EXIT_FAILURE);
-    }
-    else if (pid == 0) {
+    }else if (pid == 0) {
         printf("I am child, my pid is %d\n", getpid());
         printf("My parent pid is: %d\n", getppid());
         exit(EXIT_SUCCESS);
-    }
-    else {
+    }else {
         printf("I am parent, my pid is %d\n", getpid());
         sleep(100);
         exit(EXIT_SUCCESS);
@@ -112,8 +110,7 @@ int main() {
         } else {printf("Child process did not exit normally.\n");
         }
         printf("Parent process is done.\n");
-    }
-    return 0;
+    }return 0;
 }
 ```
 
