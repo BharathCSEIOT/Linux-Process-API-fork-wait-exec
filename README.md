@@ -109,8 +109,7 @@ int main() {
         waitpid(pid, &status, 0); // Wait for the child to finish
         if (WIFEXITED(status)) {
             printf("Child process exited with status %d.\n", WEXITSTATUS(status));
-        } else {
-            printf("Child process did not exit normally.\n");
+        } else {printf("Child process did not exit normally.\n");
         }
         printf("Parent process is done.\n");
     }
